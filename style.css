@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Norsebold";
+    src: url(Fonts/Norse-Bold.otf) format("opentype");
+}
+
 html {
     background-image: url(nature.jpg)
 }
@@ -9,16 +14,119 @@ html, body {
     height: 100%;
 }
 
+form .form-header, .motivation {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 body {
     border: 1px solid black;
     display: flex;
     flex-direction: row;
 }
 
+.logo {
+    width: 70vw;
+    padding-top: 150px;
+}
+
+.logo_section {
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 10px;
+    padding-left: 200px;
+    padding-bottom: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: 110px;
+}
+
+.logo_text {
+    font-size: 80px;
+    color: white;
+    font-family: "Norsebold", sans-serif;
+    margin-top: 15px;
+}
+
+
+
+
+/* The form */
 form {
-    background-color: lightgrey;
+    background-color: #f3f5f2;
+    width: 100vw;
+}
+
+.form-header {
+    padding: 50px 20px 30px 50px;
+}
+
+.motivation {
+    background-color: white;
+    border: 1px solid transparent;
+    padding-left: 50px;
 }
 
 #main_form {
     background-color: white;
+    height: 250px;
+    padding-top: 10px;
+    padding-left: 50px;
+
+    display: flex;
+}
+.form-1, .form-2 {
+    margin-right: 10px;
+
+    display: flex;     /* Makes form items flex children */
+    flex: 1;           /* Each column takes equal space */
+    flex-direction: column;         /* Align items vertically */
+    gap: 10px;
+}
+
+label {
+    color: grey;
+    font-weight: bold;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: lightblue;
+    outline: none;
+}
+
+
+input:invalid {                       /* needs "required in the html to work */
+    border-color: red;
+}
+
+
+/* The button */
+.submit_button {
+    margin: 20px 15px 50px 50px;
+}
+
+.account {
+    background-color: #596D48;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.log_in {
+    background-color: transparent;
+    border: transparent;
+    color: #596D48;
+    font-weight: bold;
 }
